@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "NightInTokyo";
+  src: url("./assets/fonts/NightinTokyo.ttf");
+}
+body {
+  background-color: #fdfdfd;
+}
+.section-button {
+  padding: 0.4em 1.25em;
+  font-size: 1.2em;
+  display: inline-block;
+  background-color: var(--main-pink);
+  border-radius: 0px 30px;
+  border: 1px solid var(--main-pink);
+  color: var(--main-white);
+  box-shadow: 0 3px var(--main-blue);
+}
+.section-button:hover {
+    transform: scale(1.04);
+}
+.section-button:active {
+  transform: scale(1.01);
+  box-shadow: 0 2px var(--main-blue);
+  transform: translateY(4px);
+}
+li[hover-visible="true"] {
+  color: var(--main-pink);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.floating-title {
+  font-size: 90px;
+  letter-spacing: 10px;
+  width: 150%;
+  position: absolute;
+  left: -25%;
+  top: -10px;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.popup {
+  position: fixed;
+  background-color: var(--main-pink);
+  color: white;
+  border-radius: 0px 30px;
+  padding: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  top: 20%;
+  left: 50%;
+  font-size: large;
+  z-index: 1000;
+  border: 1px solid white;
+}
+@media (max-width: 600px) {
+  .popup {
+    top: 25%;
+    left: 50%;
+  }
+}
+/*hide arrows*/
+input {
+  border: 1px solid var(--main-grey);
+  width: 2em;
+  height: 1.5em;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
