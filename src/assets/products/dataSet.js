@@ -60,7 +60,7 @@ let dataSet = [
   {
     data: "sushi",
     name: "Ikura Sushi",
-    japanese: "サーモン寿司",
+    japanese: "いくら寿司",
     id: uniqid(),
     img: IkuraSushi,
     price: 2400,
